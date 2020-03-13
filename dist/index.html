@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Frige Note</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>My item</h1>
+
+        <div class="input-contaier">
+            <input type="text" id="inputItem" placeholder="Type item...">
+            <div id="counter" class="counter">
+                <button id="substract">-</button>
+                <input type="number" value="0" id="numInput" placeholder="Type amount">
+                <button id="additon">+</button>
+            </div>
+            
+            <button onclick="addItem()" id="btn-Add">Add</button>
+        </div>
+
+
+
+        <div class="list-container" class="button" id="button">
+            <h2>my list</h2>
+
+            <table class="table" id="table">
+                <tbody id="tbody">
+                    <tr id="tableHeader">
+                        <th>Item</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                    </tr>
+<!-- 
+                    <tr id="item-list">
+                        <td id="itemName">potato</td>
+                        <td id="itemAmount">4</td>
+                        <td>remove or delete</td>
+                    </tr> -->
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
