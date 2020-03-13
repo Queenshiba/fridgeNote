@@ -82,7 +82,8 @@ function addItem() {
         createTdForAction.removeChild(createButtonForEdit);
 
         const amount = document.getElementById('amount');
-        amount += deplilateConter
+        amount.appendChild(deplilateConter)
+       
 
 
         // add action to save button
