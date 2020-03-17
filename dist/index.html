@@ -5,49 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Frige Note</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    <title>Fridge Note</title>
 </head>
 
 <body>
+    <!-- Container for input and whole table -->
     <div id="container">
-        <h1>feidge note</h1>
+        <h1>fridge note</h1>
 
+        <!-- Container for input -->
         <div class="input-contaier">
+
+            <!-- Input for a name of food -->
             <input type="text" id="inputItem" placeholder="Type item...">
+            <!-- pulldown menu for category -->
+            <div class="pulldown-category" id="pulldown-category">
+                <button class="drop-btn" id="drop-btn">Choose category</button>
+                <div class="dropdown-content" id="dropdown-content">
+                    <li class="categoryList" id="meat-fish">Meat & Fish</li>
+                    <li class="categoryList" id="veggies-fruits">fresh veggies & fruits</li>
+                    <li class="categoryList" id="daily">Dairy</li>
+                    <li class="categoryList" id="condiments">Condiments</li>
+                    <li class="categoryList" id="drinks">drinks</li>
+                </div>
+            </div>
+            <!--number input -->
             <div id="counter" class="counter">
                 <button id="substract">-</button>
-                <input type="number" value="0" id="numInput" placeholder="Type amount">
-                <button id="additon">+</button>
+                <input type="number" value="0" id="numInput" placeholder="0">
+                <button id="addition">+</button>
             </div>
-            
-            <button onclick="addItem()" id="btn-Add">Add</button>
+            <!--Add button to add all input above -->
+            <div class="add-container">
+                <p>Add to your fridge</p>
+                <button onclick="addItem()" id="btn-Add">Add</button>
+            </div>
+
         </div>
 
+        <!--img and shapes -->
+        <img src="/dist/undraw_empty_cart_co35.png" alt="" class="shopping">
+        <img src="/dist/undraw_breakfast_psiw.svg" alt="" class="breakfast">
+        <div class="circle"></div>
+        <div class="diamond"></div>
 
 
+        <!--div for whole table -->
         <div class="list-container" class="button" id="button">
-            <h2>my list</h2>
-
+            <!--table beginning -->
             <table class="table" id="table">
                 <tbody id="tbody">
+                    <!-- table header -->
                     <tr id="tableHeader">
                         <th>Item</th>
+                        <th>Category</th>
                         <th>Amount</th>
                         <th>Action</th>
                     </tr>
-<!-- 
-                    <tr id="item-list">
-                        <td id="itemName">potato</td>
-                        <td id="itemAmount">4</td>
-                        <td>remove or delete</td>
-                    </tr> -->
+                    <!-- Items are input here -->
+                    
+                    <!-- Items are input here -->
                 </tbody>
 
 
             </table>
         </div>
-    </div>
 
+    </div>
     <script src="main.js"></script>
 </body>
 
